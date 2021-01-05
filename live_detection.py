@@ -36,7 +36,7 @@ with open("pickles/face-labels.pickle", 'rb') as f:
 	og_labels = pickle.load(f)
 	labels = {v:k for k,v in og_labels.items()}
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 while(True):
    
