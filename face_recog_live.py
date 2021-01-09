@@ -23,12 +23,6 @@ FONT_THICKNESS = 2
 MODEL = 'cnn'  
 
 
-def name_to_color(name):
-    color = [(ord(c.lower())-97)*8 for c in name[:3]]
-    return color
-
-
-
 print('Loading known faces...')
 known_faces = []
 known_names = []
