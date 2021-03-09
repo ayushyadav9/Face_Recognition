@@ -2,26 +2,32 @@
 var modal = document.getElementById('id01');
 var modal2 = document.getElementById('id02');
 var camera = document.getElementById('camerabutton');
+var cameralogin = document.getElementById('cameralogin');
 var id3 = document.getElementById('id03')
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-window.onclick = function(event) {
-  if (event.target == modal2) {
-    // modal2.style.display = "none";
-  }
-}
-window.onclick = function(event) {
-  if (event.target == id3) {
-    id3.style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
+// window.onclick = function(event) {
+//   if (event.target == modal2) {
+//     // modal2.style.display = "none";
+//   }
+// }
+// window.onclick = function(event) {
+//   if (event.target == id3) {
+//     id3.style.display = "none";
+//   }
+// }
 
 
 camera.addEventListener('click',function(){
+  id3.style.display='block';
+  startup();
+},false);
+
+cameralogin.addEventListener('click',function(){
   id3.style.display='block';
   startup();
 },false);
@@ -40,7 +46,7 @@ camera.addEventListener('click',function(){
   var startbutton = null;
 
   function startup() {
-       id3.style.display = "block";
+       
       video = document.getElementById('video');
       canvas = document.getElementById('canvas');
       photo = document.getElementById('photo');
@@ -54,6 +60,7 @@ camera.addEventListener('click',function(){
           .then(function(stream) {
               video.srcObject = stream;
               video.play();
+              
           })
           .catch(function(err) {
               console.log("An error occurred: " + err);
@@ -102,6 +109,8 @@ camera.addEventListener('click',function(){
 
 
       clearphoto();
+
+      
       
   }
 
