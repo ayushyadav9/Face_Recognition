@@ -110,8 +110,6 @@ cameralogin.addEventListener('click',function(){
 
       clearphoto();
 
-      
-      
   }
 
 
