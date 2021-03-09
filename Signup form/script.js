@@ -21,7 +21,10 @@ window.onclick = function(event) {
 }
 
 
-camera.addEventListener('click',function(){id3.style.display='block';},false);
+camera.addEventListener('click',function(){
+  id3.style.display='block';
+  startup();
+},false);
 
 /* JS comes here */
 // (function() {
@@ -140,4 +143,4 @@ camera.addEventListener('click',function(){id3.style.display='block';},false);
   // window.addEventListener('load', startup, false);
  
 // })();
-camera.addEventListener('click', startup, false);
+// camera.addEventListener('click', startup, false);
